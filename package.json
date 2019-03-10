@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-preset-webpage",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "GrapesJS Plugin Webpage Preset",
   "main": "dist/grapesjs-preset-webpage.min.js",
   "scripts": {
@@ -49,7 +49,11 @@
     "grapesjs-aviary": "^0.1.2",
     "grapesjs-blocks-basic": "^0.1.7",
     "grapesjs-component-countdown": "^0.1.2",
+    "grapesjs-custom-code": "^0.1.1",
+    "grapesjs-indexeddb": "^0.1.1",
     "grapesjs-navbar": "^0.1.5",
+    "grapesjs-page-break": "^0.1.0",
+    "grapesjs-plugin-ckeditor": "0.0.9",
     "grapesjs-plugin-export": "^0.1.5",
     "grapesjs-plugin-filestack": "^0.1.1",
     "grapesjs-plugin-forms": "^0.3.5"

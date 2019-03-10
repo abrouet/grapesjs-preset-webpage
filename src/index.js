@@ -3,7 +3,7 @@ import pluginBlocks from 'grapesjs-blocks-basic';
 import pluginNavbar from 'grapesjs-navbar';
 import pluginCountdown from 'grapesjs-component-countdown';
 import pluginForms from 'grapesjs-plugin-forms';
-import pluginExport from 'grapesjs-plugin-export';
+import pluginExport from './custom/grapesjs-plugin-export.min.js';
 import pluginAviary from 'grapesjs-aviary';
 import pluginFilestack from 'grapesjs-plugin-filestack';
 

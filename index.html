@@ -9,6 +9,11 @@
     <script src="https://static.filestackapi.com/v3/filestack-0.1.10.js"></script>
     <script src="https://unpkg.com/grapesjs"></script>
     <script src="dist/grapesjs-preset-webpage.min.js"></script>
+    <script src="node_modules/grapesjs-page-break/dist/grapesjs-page-break.min.js"></script>
+    <script src="node_modules/grapesjs-custom-code/dist/grapesjs-custom-code.min.js"></script>
+    <script src="node_modules/grapesjs-plugin-ckeditor/dist/grapesjs-plugin-ckeditor.min.js"></script>
+    <script src="node_modules/grapesjs-indexeddb/dist/grapesjs-indexeddb.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
     <style>
       body,
       html {
@@ -87,13 +92,28 @@
         height: '100%',
         showOffsets: 1,
         noticeOnUnload: 0,
-        storageManager: { autoload: 0 },
+        storageManager: {
+            type: 'indexeddb',
+            autoload: 0,
+            id: 'v75',
+        },
         container: '#gjs',
         fromElement: true,
 
-        plugins: ['gjs-preset-webpage'],
+        plugins: [
+            'gjs-preset-webpage',
+            'grapesjs-page-break',
+            'grapesjs-custom-code',
+            'gjs-plugin-ckeditor',
+            'grapesjs-indexeddb',
+
+        ],
         pluginsOpts: {
-          'gjs-preset-webpage': {}
+          'gjs-preset-webpage': {},
+          'grapesjs-page-break': { /* options */ },
+          'grapesjs-custom-code': { /* options */ },
+          'gjs-plugin-ckeditor': { /* options */ },
+          'grapesjs-indexeddb': { /* options */ },
         }
       });
     </script>
