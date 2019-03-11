@@ -4,11 +4,11 @@ const webpack = require('webpack');
 const fs = require('fs');
 const name = pkg.name;
 let plugins = [];
+const ugly = require('uglify-es');
 
 module.exports = (env = {}) => {
   if (env.production) {
     plugins = [
-      new webpack.optimize.UglifyJsPlugin({ minimize: true, compressor: { warnings: false }}),
       new webpack.BannerPlugin(`${name} - ${pkg.version}`),
     ]
   } else {
