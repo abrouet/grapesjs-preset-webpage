@@ -121,6 +121,41 @@
           'grapesjs-indexeddb': { /* options */ },
         }
       });
+
+      editor.RichTextEditor.add('custom-vars', {
+          icon: `<select class="gjs-field">
+		<option value="">- Select -</option>
+        <option value="<12?php echo $model['number'] ?>">Booking Number</option>
+        <option value="<12?php echo $model['shipper_label'] ?>">Shipper</option>
+        <option value="<12?php echo $model['consignee_label'] ?>">Consignee</option>
+        <option value="<12?php echo $model['vessel_name'] ?>">Vessel Name</option>
+        <option value="<12?php echo $model['voyage_number'] ?>">Voyage Number</option>
+        <option value="<12?php echo $model['place_of_receipt']['name'] ?>">Origin</option>
+        <option value="<12?php echo $model['port_of_loading']['name'] ?>">Port Of Loading</option>
+        <option value="<12?php echo $model['port_of_unloading']['name'] ?>">Port Of Unloading</option>
+        <option value="<12?php echo $model['place_of_delivery']['name'] ?>">Final Destination</option>
+        <option value="<12?php echo $model['insurance'] ?>">Insurance</option>
+        <option value="<12?php echo $model['hazardous'] ?>">Hazardous</option>
+        <option value="<12?php echo $model['payment_type'] ?>">Payment Type</option>
+        <option value="<12?php echo $model['inbond'] ?>">Inbond</option>
+        <option value="<12?php echo $model['estimated_sail_date'] ?>">Est. Sail Date</option>
+        <option value="<12?php echo $model['estimated_arrival_date'] ?>">Est. Arrival Date</option>
+        <option value="<12?php echo $model['hazmat_cutoff_date'] ?>">Haz Cutoff  Date</option>
+        <option value="<12?php echo $model['document_cutoff_date'] ?>">DOc Cutoff  Date</option>
+        <option value="<12?php echo $model['cargo_cutoff_date'] ?>">Cargo Cutoff  Date</option>
+      </select>`,
+          // Bind the 'result' on 'change' listener
+          event: 'change',
+          result: (rte, action) => rte.insertHTML(action.btn.firstChild.value),
+          // Reset the select on change
+          update: (rte, action) => { action.btn.firstChild.value = "";}
+      })
+      //
+      // // Make private already inserted selectors
+      // editor.SelectorManager.getAll().each(selector => selector.set('private', 1));
+      //
+      // // All new selectors will be private
+      // editor.on('selector:add', selector => selector.set('private', 1));
     </script>
   </body>
 </html>

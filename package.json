@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-preset-webpage",
-  "version": "0.1.24",
+  "version": "0.1.30",
   "description": "GrapesJS Plugin Webpage Preset",
   "main": "dist/grapesjs-preset-webpage.min.js",
   "scripts": {
@@ -56,6 +56,7 @@
     "grapesjs-plugin-ckeditor": "0.0.9",
     "grapesjs-plugin-filestack": "^0.1.1",
     "grapesjs-plugin-forms": "^0.3.5",
+    "rich-text-editor": "^4.1.10",
     "uglify-es": "^3.3.9"
   }
 }
